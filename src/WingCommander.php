@@ -9,8 +9,8 @@
 //	Flight::view()->render($template, $data, $toVar);
 //});
 
-class WingCommander extends Mustache_Engine {
-
+class WingCommander extends Mustache_Engine
+{
 	/**
 	 * Path to template files
 	 */
@@ -24,7 +24,8 @@ class WingCommander extends Mustache_Engine {
 	/**
 	 * Initialise the template engine
 	 */
-	public static function init () {
+	public static function init ()
+	{
 		Flight::map("render", function($template, $data, $toVar = false){
 			Flight::view()->render($template, $data, $toVar);
 		});
@@ -41,8 +42,8 @@ class WingCommander extends Mustache_Engine {
 	 *
 	 * @return void
 	 */
-	public function render ($filename, $vars = array(), $toVar = null) {
-	
+	public function render ($filename, $vars = array(), $toVar = null)
+	{
 		$templatePath = $this->templatePath . "/" . $filename . ".mustache";
 		
 		if (file_exists($templatePath)) {
@@ -61,7 +62,6 @@ class WingCommander extends Mustache_Engine {
 			throw new Exception ("Template '$filename' could not be found.");
 		
 		}
-	
 	}
 	
 	/**
@@ -72,11 +72,10 @@ class WingCommander extends Mustache_Engine {
 	 *
 	 * @return boolean Success
 	 */
-	public function set ($name, $value) {
-	
+	public function set ($name, $value)
+	{
 		$this->vars[$name] = $value;
 		return true;
-	
 	}
 	
 	/**
@@ -86,11 +85,9 @@ class WingCommander extends Mustache_Engine {
 	 *
 	 * @return boolean Success
 	 */
-	public function setTemplatePath ($path) {
-	
+	public function setTemplatePath ($path)
+	{
 		$this->templatePath = $path;
 		return true;
-	
 	}
-
 }
