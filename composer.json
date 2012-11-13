@@ -1,6 +1,16 @@
 {
 	"name": "xmeltrut/WingCommander",
 	
+	"description": "Mustache template library wrapper for the Flight framework",
+	
+	"authors": [
+		{
+			"name": "Chris Worfolk",
+			"email": "chris@worfolk.co.uk",
+			"homepage": "http://www.worfolk.co.uk"
+		}
+	],
+	
 	"minimum-stability": "dev",
 	
 	"autoload": {
@@ -8,6 +18,7 @@
 	},
 	
 	"require": {
+		"php": ">=5.3.0",
 		"mikecao/flight": "*",
 		"mustache/mustache": "dev-master"
 	}
