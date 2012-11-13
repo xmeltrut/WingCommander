@@ -22,6 +22,17 @@ class WingCommander extends Mustache_Engine {
 	private $vars = array();
 	
 	/**
+	 * Initialise the template engine
+	 */
+	public static function init () {
+		Flight::map("render", function($template, $data, $toVar = false){
+			Flight::view()->render($template, $data, $toVar);
+		});
+		
+		Flight::register('view', 'WingCommander');
+	}
+	
+	/**
 	 * Render a page
 	 *
 	 * @param string      $filename Filename
