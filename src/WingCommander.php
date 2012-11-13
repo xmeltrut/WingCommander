@@ -5,9 +5,9 @@
  * @author Chris Worfolk <chris@worfolk.co.uk>
  */
 
-Flight::map("render", function($template, $data, $toVar = false){
-	Flight::view()->render($template, $data, $toVar);
-});
+//Flight::map("render", function($template, $data, $toVar = false){
+//	Flight::view()->render($template, $data, $toVar);
+//});
 
 class WingCommander extends Mustache {
 
