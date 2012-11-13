@@ -9,7 +9,7 @@
 //	Flight::view()->render($template, $data, $toVar);
 //});
 
-class WingCommander extends Mustache {
+class WingCommander extends Mustache_Engine {
 
 	/**
 	 * Path to template files
