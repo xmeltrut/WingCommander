@@ -1,7 +1,9 @@
 {
-	"name": "xmeltrut/WingCommander",
+	"name": "xmeltrut/wing-commander",
 	
-	"description": "Mustache template library wrapper for the Flight framework",
+	"description": "Mustache template library wrapper for the Flight microframework",
+	
+	"keywords": ["flight","mustache","microframework"],
 	
 	"authors": [
 		{
