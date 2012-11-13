@@ -3,5 +3,10 @@
 	
 	"autoload": {
 		"files": ["src/WingCommander.php"]
+	},
+	
+	"require": {
+		"mikecao/flight": "*",
+		"mustache/mustache": "dev-master"
 	}
 }
