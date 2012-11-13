@@ -1,6 +1,8 @@
 {
 	"name": "xmeltrut/WingCommander",
 	
+	"minimum-stability": "dev",
+	
 	"autoload": {
 		"files": ["src/WingCommander.php"]
 	},
