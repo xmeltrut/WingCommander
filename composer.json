@@ -5,6 +5,10 @@
 	
 	"keywords": ["flight","mustache","microframework"],
 	
+	"type": "library",
+	
+	"license": "MIT",
+	
 	"authors": [
 		{
 			"name": "Chris Worfolk",

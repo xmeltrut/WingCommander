@@ -3,11 +3,10 @@
  * Wing Commander is a Mustache wrapper for Flight
  *
  * @author Chris Worfolk <chris@worfolk.co.uk>
+ *
+ * For full copyright and licence information, please view the LICENCE
+ * file that was distributed with this source code.
  */
-
-//Flight::map("render", function($template, $data, $toVar = false){
-//	Flight::view()->render($template, $data, $toVar);
-//});
 
 class WingCommander extends Mustache_Engine
 {
