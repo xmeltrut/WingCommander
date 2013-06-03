@@ -1,27 +1,27 @@
 {
-	"name": "xmeltrut/wing-commander",
+    "name": "xmeltrut/wing-commander",
+
+    "description": "Mustache template library wrapper for the Flight microframework",
+
+    "keywords": ["flight","mustache","microframework"],
+
+    "authors": [
+        {
+            "name": "Chris Worfolk",
+            "email": "chris@worfolk.co.uk",
+            "homepage": "http://www.worfolk.co.uk"
+        }
+    ],
+
+    "minimum-stability": "dev",
 	
-	"description": "Mustache template library wrapper for the Flight microframework",
-	
-	"keywords": ["flight","mustache","microframework"],
-	
-	"authors": [
-		{
-			"name": "Chris Worfolk",
-			"email": "chris@worfolk.co.uk",
-			"homepage": "http://www.worfolk.co.uk"
-		}
-	],
-	
-	"minimum-stability": "dev",
-	
-	"autoload": {
-		"files": ["src/WingCommander.php"]
-	},
-	
-	"require": {
-		"php": ">=5.3.0",
-		"mikecao/flight": "*",
-		"mustache/mustache": "dev-master"
-	}
+    "autoload": {
+        "files": ["src/WingCommander.php"]
+    },
+
+    "require": {
+        "php": ">=5.3.0",
+        "mikecao/flight": "*",
+        "mustache/mustache": "dev-master"
+    }
 }
