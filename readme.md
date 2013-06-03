@@ -6,6 +6,7 @@ Installation
 The easiest way to install Wing Commander is using Composer. Create a composer.json file in the root of your project and require Wing Commander.
 
     {
+        "minimum-stability": "dev",
         "require": {
             "xmeltrut/wingcommander": "*"
         }
