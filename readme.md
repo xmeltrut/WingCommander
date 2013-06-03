@@ -5,51 +5,52 @@ Installation
 
 The easiest way to install Wing Commander is using Composer. Create a composer.json file in the root of your project and require Wing Commander.
 
-	{
-		"require": {
-			"xmeltrut/wing-commander": "dev-master"
-		}
-	}
+    {
+        "minimum-stability": "dev",
+        "require": {
+            "xmeltrut/wingcommander": "*"
+        }
+    }
 
 Then run the install command, and this will install all dependencies - including Flight and Mustache.
 
-	composer install
+    composer install
 
 Usage
 =====
 
 A basic usage would look like the following.
 
-	require 'vendor/autoload.php';
-	
-	WingCommander::init();
-	
-	Flight::route('/', function(){
-		Flight::view()->set("someVar", "Hello, World!");
-		Flight::render("homepage", array(), "body");
-		Flight::render("layout", array("title" => $pageTitle));
-	});
-	
-	Flight::start();
+    require 'vendor/autoload.php';
+
+    WingCommander::init();
+
+    Flight::route('/', function(){
+        Flight::view()->set("someVar", "Hello, World!");
+        Flight::render("homepage", array(), "body");
+        Flight::render("layout", array("title" => $pageTitle));
+    });
+
+    Flight::start();
 
 By default, it will look for Mustache templates in the ./templates directory of your project. You can change this by calling the setTemplatePath method.
 
-	Flight::view()->setTemplatePath("./application/templates");
+    Flight::view()->setTemplatePath("./application/templates");
 
 Lets create homepage.mustache.
 
-	<p>{{someVar}}</p>
+    <p>{{someVar}}</p>
 
 A layout to wrap it in too - layout.mustache.
 
-	<p>Wing Commander says:</p>
-	{{{body}}}
+    <p>Wing Commander says:</p>
+    {{{body}}}
 
 Bringing it all together, you can use it like you would use the standard Flight view component.
 
-	Flight::view()->set("someVar", "Hello, World!");
-	Flight::render("homepage", array(), "body");
-	Flight::render("layout", array("title" => $pageTitle));
+    Flight::view()->set("someVar", "Hello, World!");
+    Flight::render("homepage", array(), "body");
+    Flight::render("layout", array("title" => $pageTitle));
 
 Further Reading
 ===============
