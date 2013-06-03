@@ -13,7 +13,12 @@ class WingCommander extends Mustache_Engine
     /**
      * Path to template files
      */
-    private $templatePath = "./templates";
+    private $templatePath = './templates';
+
+    /**
+     * Template extension
+     */
+    private $templateExtension = 'mustache';
 
     /**
      * Variables to parse in
@@ -43,7 +48,7 @@ class WingCommander extends Mustache_Engine
      */
     public function render ($filename, $vars = array(), $toVar = null)
     {
-        $templatePath = $this->templatePath . "/" . $filename . ".mustache";
+        $templatePath = $this->templatePath . '/' . $filename . '.' . $this->templateExtension;
 
         if (file_exists($templatePath)) {
 
@@ -87,6 +92,19 @@ class WingCommander extends Mustache_Engine
     public function setTemplatePath ($path)
     {
         $this->templatePath = $path;
+        return true;
+    }
+
+    /**
+     * Set the template extension
+     *
+     * @param string $extension Extension (i.e. mustache, html)
+     *
+     * @return boolean Success
+     */
+    public function setTemplateExtension ($extension)
+    {
+        $this->templateExtension = $extension;
         return true;
     }
 }
