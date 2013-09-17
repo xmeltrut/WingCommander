@@ -8,7 +8,7 @@ The easiest way to install Wing Commander is using Composer. Create a composer.j
     {
         "minimum-stability": "dev",
         "require": {
-            "xmeltrut/wingcommander": "*"
+            "xmeltrut/wing-commander": "*"
         }
     }
 
