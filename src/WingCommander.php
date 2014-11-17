@@ -27,14 +27,16 @@ class WingCommander extends Mustache_Engine
 
     /**
      * Initialise the template engine
+     *
+     * @param array $options Mustache options
      */
-    public static function init ()
+    public static function init ($options = array())
     {
         Flight::map("render", function($template, $data, $toVar = false){
             Flight::view()->render($template, $data, $toVar);
         });
 
-        Flight::register('view', 'WingCommander');
+        Flight::register('view', 'WingCommander', $options);
     }
 
     /**
