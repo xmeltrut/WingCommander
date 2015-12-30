@@ -36,7 +36,7 @@ class WingCommander extends Mustache_Engine
             Flight::view()->render($template, $data, $toVar);
         });
 
-        Flight::register('view', 'WingCommander', $options);
+        Flight::register('view', get_called_class(), $options);
     }
 
     /**
