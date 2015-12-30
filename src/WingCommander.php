@@ -18,7 +18,7 @@ class WingCommander extends Mustache_Engine
     /**
      * Template extension
      */
-    private $templateExtension = 'mustache';
+    private $templateExtension = 'html';
 
     /**
      * Variables to parse in
