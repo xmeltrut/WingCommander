@@ -1,7 +1,13 @@
+Wing Commander
+==============
+
+[![Latest Stable Version](https://poser.pugx.org/xmeltrut/wing-commander/v/stable)](https://packagist.org/packages/xmeltrut/wing-commander)
+[![License](https://poser.pugx.org/xmeltrut/wing-commander/license)](https://packagist.org/packages/xmeltrut/wing-commander)
+
 Wing Commander is a Mustache wrapper for the Flight PHP microframework.
 
 Installation
-============
+------------
 
 The easiest way to install Wing Commander is using Composer. Create a composer.json file in the root of your project and require Wing Commander.
 
@@ -16,7 +22,7 @@ Then run the install command, and this will install all dependencies - including
     composer install
 
 Usage
-=====
+-----
 
 A basic usage would look like the following.
 
@@ -52,7 +58,7 @@ Bringing it all together, you can use it like you would use the standard Flight 
     Flight::render("layout", array("title" => $pageTitle));
 
 Further Reading
-===============
+---------------
 
 * [Flight](http://flightphp.com/)
 * [Mustache.php](https://github.com/bobthecow/mustache.php)
