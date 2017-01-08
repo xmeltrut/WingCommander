@@ -24,7 +24,6 @@ class WingCommander extends Mustache_Engine
      * Variables to parse in
      */
     private $vars = array();
-
     /**
      * Initialise the template engine
      *
@@ -32,8 +31,8 @@ class WingCommander extends Mustache_Engine
      */
     public static function init ($options = array())
     {
-        Flight::map("render", function($template, $data, $toVar = false){
-            Flight::view()->render($template, $data, $toVar);
+        Flight::map("render", function($template, $data, $toVar = false, $options = array()){
+            Flight::view()->render($template, $data, $toVar, $options);
         });
 
         Flight::register('view', get_called_class(), $options);
@@ -45,17 +44,23 @@ class WingCommander extends Mustache_Engine
      * @param string      $filename Filename
      * @param array       $vars     Variables
      * @param string|null $toVar    If specified, it will save as a variable rather than output
+     * @parma array       $options  Options for mustache renderer. Not the most beautiful way, but still a way
      *
      * @return void
      */
-    public function render ($filename, $vars = array(), $toVar = null)
+    public function render ($filename, $vars = array(), $toVar = null, $options = array())
     {
         $templatePath = $this->templatePath . '/' . $filename . '.' . $this->templateExtension;
 
         if (file_exists($templatePath)) {
 
             $template = file_get_contents($templatePath);
-            $output = parent::render($template, array_merge($this->vars, $vars));
+
+            //Old style. I did not like it, because I found no way to add options
+            //$output = parent::render($template, array_merge($this->vars, $vars));
+            //New style. I like it a bit more
+            $mustache = new parent($options);
+            $output = $mustache->render($template, array_merge($this->vars, $vars));
 
             if ($toVar) {
                 $this->set($toVar, $output);
